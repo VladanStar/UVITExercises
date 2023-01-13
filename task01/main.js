@@ -126,3 +126,76 @@ console.log(x);
 console.log(Number.isFinite(x));
 console.log(Number.isInteger(x));
 console.log(x.toFixed(3));
+
+// specijalna vrednost NaN
+console.log(NaN);
+console.log(000);
+
+// let x = false;
+
+let y = 3 + x;
+console.log(y);
+
+let z = 'Miki' + x;
+console.log(z);
+
+console.log('---');
+x = true;
+
+y = 3 + x;
+console.log(y);
+
+z = 'Miki' + x;
+console.log(z);
+
+console.log('---');
+x = 0;
+
+y = x ? 'nije nula' : 'nula';
+console.log(y);
+
+z = 'Miki' + x;
+console.log(z);
+
+console.log('---');
+x = 11;
+
+y = x ? 'nije nula' : 'nula';
+console.log(y);
+
+z = 'Miki' + x;
+console.log(z);
+
+/* automatska konveryija tipova pri izvršenju aritmetičkih operacija */
+// prikazaće 0
+console.log(8 * null);
+
+// prikazaće 4
+console.log('5' - 1);
+
+// prikazaće 51
+console.log('5' + 1);
+
+// prikazaće NaN
+console.log('pet' * 2);
+
+/* automatska konverzija tipova pri izvršenju operacija poređenja*/
+// prikazaće true
+console.log(false == 0);
+
+/* poređenje jednakosti za vrednosti null i/ili undefined se realizuje na pomalo specifičan način  */
+// prikazaće true
+console.log(null == undefined);
+
+// prikazaće false
+console.log(null == 0);
+
+/* logički operatori se 'skraćeno' izvršavaju */
+// prikazaće Karlo
+console.log(undefined || 'Karlo');
+
+// prikazaće Karlo
+console.log('Karlo' || 'Korisnik');
+
+console.log(2 != 1 && 4 != 3 &&
+    0 == 4 && 2 != 3);
