@@ -288,3 +288,13 @@ console.log(undefined == undefined);
 console.log((Math.random() - 3) * 6);
 
 console.log(Math.round(Math.random() * 10));
+
+var slucajan = Math.random();
+for (var pokusaja = 1; ; pokusaja++) {
+    console.log(slucajan);
+    if (slucajan < 0.1)
+        break;
+    slucajan = Math.random();
+}
+console.log(`Извучен је случајан број ${slucajan} мањи од 0.1 \
+    из покушаја бр. ${pokusaja}`);
