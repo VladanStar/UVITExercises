@@ -298,3 +298,27 @@ for (var pokusaja = 1; ; pokusaja++) {
 }
 console.log(`Извучен је случајан број ${slucajan} мањи од 0.1 \
     из покушаја бр. ${pokusaja}`);
+
+const osoba1 = "Никола";
+console.log(osoba1);
+
+let osoba2 = osoba1 + "!!!!";
+console.log(osoba2);
+
+// nemoguce - pokusaj postavljanja
+// vrednosti za konstantnu promenljivu
+//osoba1 = "Драгослав"
+{
+    var osoba3 = "Петар";
+    console.log(osoba3);
+}
+console.log(osoba3 + " " + osoba2)
+// rad sa promenljivom deklarisanom
+// pomocu let
+{
+    let osoba4 = "Јован"
+    console.log(osoba4)
+}
+// nemoguce - pokusaj pristupa
+// promenljvoj van njenog opsega
+// definisanosti
