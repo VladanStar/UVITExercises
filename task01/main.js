@@ -284,3 +284,7 @@ console.log(undefined != false);
 console.log('--- nedostajuce vrednosti');
 console.log(undefined == null);
 console.log(undefined == undefined);
+
+console.log((Math.random() - 3) * 6);
+
+console.log(Math.round(Math.random() * 10));
