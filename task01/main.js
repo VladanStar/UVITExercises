@@ -112,4 +112,17 @@ console.log(оsoba4 + " " + osoba2)
 console.log(123 % 10);
 console.log(Infinity == Infinity)
 let vladan = "Vladan Cupric";
-console.log(vladan.replace("Vladan", "Milan"))
+console.log(vladan.replace("Vladan", "Milan"));
+
+console.log("---");
+let x = 0 / (2 - 2);
+console.log(x);
+console.log(Number.isFinite(x));
+console.log(Number.isNaN(x));
+
+console.log("---");
+x = 7 / 3;
+console.log(x);
+console.log(Number.isFinite(x));
+console.log(Number.isInteger(x));
+console.log(x.toFixed(3));
