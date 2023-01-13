@@ -131,7 +131,7 @@ console.log(x.toFixed(3));
 console.log(NaN);
 console.log(000);
 
-// let x = false;
+let x = false;
 
 let y = 3 + x;
 console.log(y);
