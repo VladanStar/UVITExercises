@@ -7,4 +7,5 @@ console.log(" Trla baba lan,\"\\n\" da joj prođe dan ");
 console.log("Trla \
 baba lan, \
 da joj prođe \
-dan ")
+dan ");
+console.log(" Trla baba lan,\n da joj prođe dan ")
