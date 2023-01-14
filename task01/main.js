@@ -131,7 +131,7 @@ console.log(x.toFixed(3));
 console.log(NaN);
 console.log(000);
 
-let x = false;
+// let x = false;
 
 let y = 3 + x;
 console.log(y);
@@ -387,3 +387,14 @@ console.log(`--- niska ''`);
 console.log(null > '');
 console.log(null < '');
 console.log(null == '');
+
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+    console.log(`${property}: ${object[property]}`);
+}
+
+// Expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
