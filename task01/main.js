@@ -398,3 +398,43 @@ for (const property in object) {
 // "a: 1"
 // "b: 2"
 // "c: 3"
+const buka = function () {
+    console.log(" Tras !");
+};
+
+buka();
+buka();
+// broj argumenata sa moze raylikovati od broja parametara
+buka("Petar");
+
+const triArgumenta = function (a, b, c) {
+    console.log('---\n' + a);
+    console.log(b);
+    console.log(c);
+};
+
+triArgumenta(1, 2, 'tri');
+triArgumenta(1, 2);
+triArgumenta(1);
+triArgumenta();
+
+const stepen = function (osnova = 10, izlozilac = 2) {
+    let ret = 1;
+    for (let i = 0; i < izlozilac; i++)
+        ret *= osnova;
+    return ret;
+};
+
+console.log(stepen(3, 4));
+console.log(stepen(4, 3));
+console.log(stepen(4));
+console.log(stepen());
+
+let test = "globalna vrednost";
+function testirajOpsegDefinisanosti() {
+    test = "lokalna vrednost";
+    console.log(test);
+}
+console.log(test);
+testirajOpsegDefinisanosti();
+console.log(test);
