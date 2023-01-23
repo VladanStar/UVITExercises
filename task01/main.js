@@ -468,4 +468,43 @@ function stepen(osnova, izlozilac) {
     return osnova * stepen(osnova, izlozilac - 1);
 }
 
-console.log(stepen(3, 4))
+console.log(stepen(3, 4));
+let buka = function() {
+    console.log(" Tras !");
+};
+
+buka();
+buka();
+// broj argumenata moze biti veci
+// od broja parametara funkcije
+buka("Petar");
+
+const stepen = function (osnova, izlozilac) {
+    let ret = 1;
+    for (let i = 0; i < izlozilac; i++)
+        ret *= osnova;
+    return ret;
+};
+
+console.log(stepen(3, 4));
+console.log(stepen(4, 3));
+console.log(stepen(4));
+console.log(stepen());
+
+
+
+let stepen = function (osnova, izlozilac) {
+    if (osnova == undefined)
+        osnova = 10;
+    if (izlozilac == undefined)
+        izlozilac = 2;
+    let ret = 1;
+    for (let i = 0; i < izlozilac; i++)
+        ret *= osnova;
+    return ret;
+};
+
+console.log(stepen(3, 4));
+console.log(stepen(4, 3));
+console.log(stepen(4));
+console.log(stepen());
