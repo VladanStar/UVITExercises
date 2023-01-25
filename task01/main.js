@@ -594,3 +594,31 @@ console.log(object1.value);
 
 console.log(object3.value);
 // Prikazuje 10
+
+// vrednosti null i undefined ne poseduju osobine
+// pokusaj pristupa ma kojoj njihovoj osobini dovodi do greske u izvrsavanju
+console.log(null.length);
+console.log(null.duzina);
+console.log(undefined.length);
+console.log(undefined.duzina);
+
+let obj = {
+    rad: "Odlazak na posao",
+    drvo: "Grljenje drveća",
+    pica: "Jedenje pice",
+    trcanje: "Trčanje kroz park",
+    televizija: "Gledanje televizije"
+};
+
+for (let osobina in obj)
+    console.log(`${osobina} - ${obj[osobina]}`);
+
+console.log("---");
+
+obj = {
+    ime: "Miki",
+    length: 4
+};
+
+for (let osobina in obj)
+    console.log(`${osobina} - ${obj[osobina]}`);
