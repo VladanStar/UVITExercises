@@ -719,3 +719,47 @@ for (let i in niz)
 console.log("---");
 for (let x of niz)
    console.log(x);
+
+
+
+   let poruka = [];
+
+poruka.push("nema");
+poruka.push("povlačenja","nema");
+poruka.push("predaje", 2 );
+
+console.log(poruka);
+
+console.log(poruka.join(" "));
+
+console.log(poruka.join("+"));
+
+console.log(poruka.pop());
+
+poruka.pop()
+
+console.log(poruka);
+
+
+var podsetnik = [];
+
+function podsetiMe(zadatak) {
+    podsetnik.push(zadatak);
+}
+
+function staJeSledece() {
+    return podsetnik.shift();
+}
+
+function hitnoMePodseti(zadatak) {
+    podsetnik.unshift(zadatak);
+}
+
+
+podsetiMe("priprema slajdova za predavanja");
+podsetiMe("priprema zadataka");
+hitnoMePodseti("odgovoriti na pisma");
+podsetiMe("kupovina knjige");
+
+while (podsetnik.length != 0) {
+    
