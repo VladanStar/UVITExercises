@@ -776,3 +776,12 @@ console.log(sumaBrojeva(1, 2, 3));
 console.log(sumaBrojeva(1, 2, 3, [1,2]));
 console.log(sumaBrojeva(1, 2, 3, [1]));
 console.log(sumaBrojeva("Miki", "1", 2, "100.5", 3));
+
+let nizBrojeva = [1, 2, 3, "mika", "zika";
+
+function prikaziSvaki(niz) {
+    for (let i = 0; i < niz.length; i++)
+        console.log(niz[i]);
+}
+
+prikaziSvaki(nizBrojeva);
