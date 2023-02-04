@@ -1231,3 +1231,99 @@ function filter(array, test) {
       return person.sex == "m" && person.born > 1900 && person.born < 1925;
     })
   );
+
+  function filter(array, test) {
+    let passed = [];
+    for (let i = 0; i < array.length; i++) {
+      if (test(array[i])) passed.push(array[i]);
+    }
+    return passed;
+  }
+  
+  function map(array, transform) {
+    let mapped = [];
+    for (var i = 0; i < array.length; i++) mapped.push(transform(array[i]));
+    return mapped;
+  }
+  
+  var opis =
+    `[{"name":"Emma de Milliano","sex":"f",
+  "born":1876,"died":1956,
+  "father":"Petrus de Milliano","
+  mother":"Sophia van Damme"},` +
+    /* *** */
+    `{"name":"Carolus Haverbeke","sex":"m",
+  "born":1832,"died":1905,
+  "father":"Carel Haverbeke",
+  "mother":"Maria van Brussel"}]`;
+  
+  let family = JSON.parse(opis);
+  
+  // filtriranje tako da se zadrže samo stariji od 90
+  console.log("---");
+  let starijiOd90 = filter(family, function (person) {
+    return person.died - person.born > 90;
+  });
+  console.log(starijiOd90);
+  
+  // transformisanje starijih od 90 pomoću map
+  console.log("---");
+  console.log(
+    map(starijiOd90, function (person) {
+      return person.name + " " + (person.died - person.born);
+    })
+  );
+  
+  // filtriranje tako da se zadrže samo stariji od 70
+  console.log("---");
+  let starijiOd70 = filter(family, (person) => person.died - person.born > 70);
+  console.log(starijiOd70);
+  
+  // transformisanje starijih od 60 pomoću map
+  console.log("---");
+  console.log(
+    map(starijiOd70, (person) => person.name + " " + (person.died - person.born))
+  );
+  
+  // filtriranje i transformisanje pomoću metoda niza
+  console.log("---");
+  console.log(
+    family
+      .filter((x) => x.died - x.born > 70)
+      .map((x) => x.name + " " + (x.died - x.born))
+  );
+
+  let opis =
+  `[{"name":"Emma de Milliano","sex":"f",
+"born":1876,"died":1956,
+"father":"Petrus de Milliano","
+mother":"Sophia van Damme"},` +
+  /* *** */
+  `{"name":"Carolus Haverbeke","sex":"m",
+"born":1832,"died":1905,
+"father":"Carel Haverbeke",
+"mother":"Maria van Brussel"}]`;
+
+let pretci = JSON.parse(opis);
+
+function prosek(niz) {
+  function plus(a, b) {
+    return a + b;
+  }
+  return niz.reduce(plus) / niz.length;
+}
+
+function uzrast(p) {
+  return p.died - p.born;
+}
+
+function jeMusko(p) {
+  return p.sex == "m";
+}
+
+function jeZensko(p) {
+  return p.sex == "f";
+}
+
+console.log(prosek(pretci.filter(jeMusko).map(uzrast)));
+console.log(prosek(pretci.filter(jeZensko).map(uzrast)));
