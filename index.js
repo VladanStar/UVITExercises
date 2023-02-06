@@ -48,3 +48,38 @@ zaSvaki(nizBrojeva, function (x) {
 console.log("---");
 
 zaSvaki(nizBrojeva, (x) => console.log(x));
+
+let opis =
+    `[{"name":"Emma de Milliano","sex":"f",
+"born":1876,"died":1956,
+"father":"Petrus de Milliano","
+mother":"Sophia van Damme"},` +
+    /* *** */
+    `{"name":"Carolus Haverbeke","sex":"m",
+"born":1832,"died":1905,
+"father":"Carel Haverbeke",
+"mother":"Maria van Brussel"}]`;
+
+let pretci = JSON.parse(opis);
+
+function prosek(niz) {
+    function plus(a, b) {
+        return a + b;
+    }
+    return niz.reduce(plus) / niz.length;
+}
+
+function uzrast(p) {
+    return p.died - p.born;
+}
+
+function jeMusko(p) {
+    return p.sex == "m";
+}
+
+function jeZensko(p) {
+    return p.sex == "f";
+}
+
+console.log(prosek(pretci.filter(jeMusko).map(uzrast)));
+console.log(prosek(pretci.filter(jeZensko).map(uzrast)));
