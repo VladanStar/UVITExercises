@@ -64,3 +64,13 @@ bucna(Boolean)(0);
 bucna(Boolean)(2);
 bucna(Math.sin)(Math.PI / 2);
 bucna(Math.cos)(Math.PI / 2);
+
+console.log(Object.getPrototypeOf({}) == Object.prototype);
+
+console.log(Object.getPrototypeOf(Object.prototype));
+
+console.log(Object.getPrototypeOf(isNaN) ==
+    Function.prototype);
+
+console.log(Object.getPrototypeOf([]) ==
+    Array.prototype);
